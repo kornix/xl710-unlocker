@@ -6,4 +6,4 @@ clean:
 	rm -f $(TARGETS)
 
 %:	%.c
-	gcc -Wall -O2 $< -o $@
+	gcc -static -Wall -O2 $< -o $@
