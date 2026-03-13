@@ -1,11 +1,8 @@
 # xl710-unlocker
-This program unlocks Intel XL710 NICs.
+This program unlocks Intel X710 NICs to use 3rd-party transceivers.
 
-Tested by my own on 4x10GbE X710-DA4 adapter (Dell 68M95) successfully.
-
-The only update I've made to the original source is adding '-static' flag to build statically linked binary to run it on different linux distros without recompiling.
-
-## Usage
+Tested by my own on 4x10GbE X710-DA4 adapter (Dell 68M95) successfully. However, use it on your own risk.
+### Usage
 Run the tool once providing the name of one of the NIC interfaces to unlock all interfaces on the NIC:
 
 ```shell
@@ -19,3 +16,8 @@ MISC: 0x6b0c <- locked
 MISC: 0x6b0c <- locked
 Ready to fix it? [y/N]: y
 ```
+# Credits
+Original source was published by [Wesley W. Terpstra](https://github.com/terpstra) on [Github](https://github.com/terpstra/xl710-unlocker).
+# Changelog
+### 2026-03-13
+- Makefile updated - added '-static' flag to build statically linked binary.
